@@ -1,10 +1,9 @@
 
 <# 
- 
-.SYNOPSIS
+ .SYNOPSIS
 	Kickstart.ps1 is a Windows PowerShell script to install/configure IIS and Website Samples
 .DESCRIPTION
-	Version: 1.0.0
+	Version: 2.0.0
 	Kickstart.ps1 is a Windows PowerShell script to install/configure IIS and Website Samples.
     It relies on bootstrap.ps1 to supply the requred 2 mandatory parmeters.
 .DISCLAIMER
