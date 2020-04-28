@@ -197,7 +197,7 @@ $Randomizer=$Randomizer.ToLower()
 [Reflection.Assembly]::LoadWithPartialName("System.Web")
 [string] $passrandom=[system.web.security.membership]::GeneratePassword(9,3)
 [string] $AppPoolPassword = "MSFTDemo" + $passrandom
-New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureString -AsPlainText $AppPoolPassword -Force) -PassThru -Surname $AppPoolUserName -GivenName $AppPoolUserName  -Description “Test AppPool Account ” -AccountExpirationDate $null
+New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureString -AsPlainText $AppPoolPassword -Force) -PassThru -Surname $AppPoolUserName -GivenName $AppPoolUserName  -Description "Test AppPool Account " -AccountExpirationDate $null
 ##
 
 
@@ -225,7 +225,7 @@ Add-SPN -UserName $AppPoolUserName
 [Reflection.Assembly]::LoadWithPartialName("System.Web")
 [string] $passrandom=[system.web.security.membership]::GeneratePassword(9,3)
 [string] $AppPoolPassword = "MSFTDemo" + $passrandom
-New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureString -AsPlainText $AppPoolPassword -Force) -PassThru -Surname $AppPoolUserName -GivenName $AppPoolUserName  -Description “Test AppPool Account” -AccountExpirationDate $null
+New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureString -AsPlainText $AppPoolPassword -Force) -PassThru -Surname $AppPoolUserName -GivenName $AppPoolUserName  -Description "Test AppPool Account " -AccountExpirationDate $null
 
 ##
 
@@ -251,7 +251,7 @@ Set-AppPoolCredentials -SiteName $WebSiteName2 -UserName $AppPoolUserName -Passw
 [Reflection.Assembly]::LoadWithPartialName("System.Web")
 [string] $passrandom=[system.web.security.membership]::GeneratePassword(9,3)
 [string] $AppPoolPassword = "MSFTDemo" + $passrandom
-New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureString -AsPlainText $AppPoolPassword -Force) -PassThru -Surname $AppPoolUserName -GivenName $AppPoolUserName  -Description “Test AppPool Account” -AccountExpirationDate $null
+New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureString -AsPlainText $AppPoolPassword -Force) -PassThru -Surname $AppPoolUserName -GivenName $AppPoolUserName  -Description "Test AppPool Account " -AccountExpirationDate $null
 
 ##
 
