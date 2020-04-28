@@ -202,9 +202,13 @@ New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureStri
 
 
 Create-WebSite -SiteName $WebSiteName1 -Port $WebSitePort1 -AppFolder $WebSitePath1
+sleep(2)
 Create-WebAppAndPool -SiteName $WebSiteName1 
+sleep(1)
 Set-AppPoolCredentials -SiteName $WebSiteName1 -UserName $AppPoolUserName -Password $AppPoolPassword -Domain $AppPoolDomain
+sleep(1)
 Set-KerberosAuthForAppPool -WebSiteName $WebSiteName1
+sleep(1)
 Add-SPN -UserName $AppPoolUserName 
 
 
@@ -230,8 +234,11 @@ New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureStri
 ##
 
 Create-WebSite -SiteName $WebSiteName2 -Port $WebSitePort2 -AppFolder $WebSitePath2
+sleep(2)
 Create-WebAppAndPool -SiteName $WebSiteName2 
+sleep(1)
 Set-AppPoolCredentials -SiteName $WebSiteName2 -UserName $AppPoolUserName -Password $AppPoolPassword -Domain $AppPoolDomain
+sleep(1)
 
 
 ####################################################################
@@ -256,8 +263,11 @@ New-ADUser $AppPoolUserName -enable $true -AccountPassword (ConvertTo-SecureStri
 ##
 
 Create-WebSite -SiteName $WebSiteName3 -Port $WebSitePort3 -AppFolder $WebSitePath3
+sleep(2)
 Create-WebAppAndPool -SiteName $WebSiteName3 
+sleep(1)
 Set-AppPoolCredentials -SiteName $WebSiteName3 -UserName $AppPoolUserName -Password $AppPoolPassword -Domain $AppPoolDomain
+sleep(1)
 
 Write-Progress -PercentComplete 100 -id 1 -Activity "App Proxy Demo Installer " -Status "Comppleting Configuration"  
 Write-Progress -PercentComplete 100 -id 2 -Activity "Configuration Started" -Status "Confuguration  Completed!!" 
