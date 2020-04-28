@@ -50,7 +50,7 @@ function Invoke-Script
 }
 
 
-[string]$kickStartFolder = $destinationDirectory + "Website\"
+[string]$kickStartFolder = $destinationDirectory + "DemoSuite-master\Website\"
 [string]$kickStartScript = $kickStartFolder + "install.ps1"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest -Uri "https://github.com/jeevanbisht/DemoSuite/archive/master.zip"
