@@ -185,7 +185,7 @@ Write-Progress -PercentComplete 5 -id 2 -Activity "Initialize Install" -Status "
 ####################################################################
 ####################################################################
 ##Some variables
-[string] $WebSiteName1 = "WIA App"
+[string] $WebSiteName1 = "WIAApp"
 [string] $WebSitePath1 = $BootStrapFolder + "\" + "WIA"
 [string] $WebSitePort1 = "8080"
 
@@ -218,7 +218,7 @@ Add-SPN -UserName $AppPoolUserName
 ####################################################################
 ####################################################################
 ##Some variables
-[string] $WebSiteName2 = "Header App"
+[string] $WebSiteName2 = "HeaderApp"
 [string] $WebSitePath2 = $BootStrapFolder + "\" + "HeaderApp1"
 [string] $WebSitePort2 = "8081"
 
@@ -247,7 +247,7 @@ sleep(1)
 ####################################################################
 ####################################################################
 ##Some variables
-[string] $WebSiteName3 = "Forms App"
+[string] $WebSiteName3 = "FormsApp"
 [string] $WebSitePath3 = $BootStrapFolder + "\" + "Forms"
 [string] $WebSitePort3 = "8082"
 
