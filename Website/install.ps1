@@ -268,5 +268,20 @@ sleep(1)
 Set-AppPoolCredentials -SiteName $WebSiteName3 -UserName $AppPoolUserName -Password $AppPoolPassword -Domain $AppPoolDomain
 sleep(1)
 
+
+
+$BootStrapFolder = "C:\AppDemov1\DemoSuite-master\Website"
+$installFolder="$BootStrapFolder" + "\dotnetCore"
+cd $installFolder
+.\dotnet-hosting-3.1.3-win.exe /quiet 
+    
+
+
+
+
 Write-Progress -PercentComplete 100 -id 1 -Activity "App Proxy Demo Installer " -Status "Comppleting Configuration"  
 Write-Progress -PercentComplete 100 -id 2 -Activity "Configuration Started" -Status "Confuguration  Completed!!" 
+
+
+
+
