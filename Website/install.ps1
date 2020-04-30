@@ -172,6 +172,12 @@ Write-Progress -PercentComplete 5 -id 2 -Activity "Initialize Install" -Status "
 
 
 
+Write-Progress -PercentComplete 100 -id 2 -Activity "Module Loaded" -Status "IIS" 
+Write-Progress -PercentComplete 50 -id 1 -Activity "App Proxy Demo Installer " -Status "Starting Configuration" 
+Import-Module WebAdministration
+Write-Progress -PercentComplete 25 -id 2 -Activity "Initialize Install" -Status "Install WIA Website" 
+
+
 
 
 [string] $AppPoolDomain = $env:USERDOMAIN
@@ -211,6 +217,7 @@ sleep(1)
 Add-SPN -UserName $AppPoolUserName 
 
 
+Write-Progress -PercentComplete 50 -id 2 -Activity "Initialize Install" -Status "Install HeaderApp Website" 
 ####################################################################
 ####################################################################
 # Website 2
@@ -240,6 +247,7 @@ Set-AppPoolCredentials -SiteName $WebSiteName2 -UserName $AppPoolUserName -Passw
 sleep(1)
 
 
+Write-Progress -PercentComplete 75 -id 2 -Activity "Initialize Install" -Status "Install Forms App Website" 
 ####################################################################
 ####################################################################
 # Website 3
@@ -269,6 +277,8 @@ Set-AppPoolCredentials -SiteName $WebSiteName3 -UserName $AppPoolUserName -Passw
 sleep(1)
 
 
+
+Write-Progress -PercentComplete 75 -id 2 -Activity "Initialize Install" -Status "Install ASP.net Core hosting Package" 
 
 $BootStrapFolder = "C:\AppDemov1\DemoSuite-master\Website"
 $installFolder="$BootStrapFolder" + "\dotnetCore"
